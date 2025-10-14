@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Animations & Transitions Demo</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        padding: 50px;
+        background:blanchedalmond;
+      }
+
+      h1 {
+        margin-bottom: 40px;
+      }
+      /* 1. Button with transition */
+      .transition-btn {
+        padding: 15px 30px;
+        background-color: #d76ae1;
+        border: none;
+        color: rgb(108, 17, 108);
+        font-size: 18px;
+        /* cursor: pointer; */
+        transition: background-color 10s ease, transform 10s ease;
+        margin-bottom: 40px;
+      }
+
+      .transition-btn:hover {
+        background-color: rgb(77, 187, 199);
+        transform: scale(1.1);
+      }
+
+      /* 2. Bouncing box */
+      .animated-ball {
+        width: 100px;
+        height: 100px;
+        background-color: #a80569;
+        margin: 50px auto;
+        border-radius: 50px;
+        animation: bouncingball 2s infinite ease-in-out;
+      }
+
+      @keyframes bouncingball {
+        0%,
+        100% {
+          transform: translatex(0);
+        }
+        50% {
+          transform: translatex(120px);
+        }
+      }
+
+      /* 3. Fade in box */
+      .fade-in-box {
+        width: 150px;
+        height: 150px;
+        background-color: #4ccf83;
+        margin: 40px auto;
+        opacity: 1;
+        animation: fadeIn 8s backwards;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 0;
+        }
+      }
+
+      /* 4. Rotate on hover */
+      .rotate-box {
+        width: 120px;
+        height: 120px;
+        /* border-radius: 50%; */
+        background-color: #41b495;
+        margin: 40px auto;
+        position: relative;
+        transition: transform 5s ease;
+      }
+
+      .rotate-box:hover {
+        transform: rotate(60deg);
+      }
+
+      .circle-text {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 12px;
+        color: rgb(99, 99, 164);
+        white-space: nowrap;
+      }
+
+      /* 5. Slide in on load */
+      .slide-in-box {
+        width: 200px;
+        height: 60px;
+        /* background-color: #f39c12; */
+        color: rgb(116, 186, 24);
+        line-height: 60px;
+        font-weight: bold;
+        margin: 40px auto;
+        transform: translateX(-300px);
+        animation: slideIn 1.5s forwards ease-out;
+      }
+
+      @keyframes slideIn {
+        to {
+          transform: translateX(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Animation & Transition Demo</h1>
+
+    <!-- 1. Button with hover transition -->
+    <button class="transition-btn">Hover Me!</button>
+
+    <!-- 2. Bouncing animation -->
+    <div class="animated-ball"></div>
+
+    <!-- 3. Fade-in box on load -->
+    <div class="fade-in-box"></div>
+
+    <!-- 4. Rotate on hover -->
+    <div class="rotate-box">
+      <div class="circle-text">satya vasavi yelamarthi</div>
+    </div>
+
+    <!-- 5. Slide in from left -->
+    <div class="slide-in-box">Sliding In!</div>
+  </body>
+</html>
