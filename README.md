@@ -1,7 +1,7 @@
 🎨 CSS Animations & Transitions Demo
 
 This project demonstrates the use of CSS animations and transitions to create smooth, interactive effects using only HTML and CSS — no JavaScript required!
-It was built as part of a front-end learning project by satya vasavi yelamarthi.
+It was built as part of a front-end learning project by Satya Vasavi Yelamarthi.
 
 🧠 Overview
 
